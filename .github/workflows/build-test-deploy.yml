@@ -16,7 +16,7 @@ jobs:
       - name: npm install
         run: npm install
       - name: npm build
-        run: npm build
+        run: npm run build
 
   test:
     needs: build
@@ -30,7 +30,7 @@ jobs:
           node-version: 20.x
       - name: npm install
         run: npm install
-      - name: npm build
+      - name: npm test
         run: npm test
 
   deploy:
